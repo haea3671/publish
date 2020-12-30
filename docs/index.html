@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+<title>타이틀을 넣어주세요.</title>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:;">
+<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+</a>
+<script type='text/javascript'>
+  //<![CDATA[
+    Kakao.init('fe8e700a402c67918bc34f6ef974d636');
+
+    Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      objectType: 'feed',
+      content: {
+        title: '대제목',
+        description: '소제목',
+        imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
+        link: {
+          mobileWebUrl: 'https://haea3671.github.io/',
+          webUrl: 'https://haea3671.github.io/'
+        }
+      },
+      buttons: [
+        {
+          title: '버튼 타이틀',
+          link: {
+            mobileWebUrl: 'https://haea3671.github.io/',
+            webUrl: 'https://haea3671.github.io/'
+          }
+        }
+      ]
+    });
+  //]]>
+</script>
+</body>
+</html>
