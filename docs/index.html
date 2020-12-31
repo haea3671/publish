@@ -24,6 +24,7 @@
         .sharepage {
             display: none;
         }
+
      @media screen and (max-width: 760px) {
      }
   </style>
@@ -36,9 +37,17 @@
 </head>
 
 <body>
+
   <div class='inputpage'>
+    <script>
+      var inputVar = prompt("문자열을 입력하세요", "");
+    </script>
+
+    
+<!--
     <input type='text' name='name' value='' />
     <button class="next" type="button" onclick="open_share()"> 전송 </button>
+-->
   </div>
 
   <div class='sharepage'>
@@ -53,20 +62,20 @@
         container: '#kakao-link-btn',
         objectType: 'feed',
         content: {
-          title: 'from '+name,
+          title: 'from '+inputVar,
           description: '2021년 새해 복 많이 받으세요!',
           imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
           link: {
-            mobileWebUrl: 'https://haea3671.github.io/'+name,
-            webUrl: 'https://haea3671.github.io/'+name
+            mobileWebUrl: 'https://haea3671.github.io/'+inputVar,
+            webUrl: 'https://haea3671.github.io/'+inputVar
           }
         },
         buttons: [
           {
             title: '카드 보기',
             link: {
-              mobileWebUrl: 'https://haea3671.github.io/'+name,
-              webUrl: 'https://haea3671.github.io/'+name
+              mobileWebUrl: 'https://haea3671.github.io/'+inputVar,
+              webUrl: 'https://haea3671.github.io/'+inputVar
             }
           }
         ]
