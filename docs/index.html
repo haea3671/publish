@@ -10,22 +10,6 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            font-family: 'Poor Story', cursive;
-        }
-
-        body {
-            background-color: rgb(255, 196, 247);
-        }
-    </style>
-    <script>
-        function input() {
-            document.getElementsByClassName("page-close")[0].style.display = "none";
-            document.getElementsByClassName("page-open")[0].style.display = "block";
-        }
-    </script>
 </head>
 
 <body>
@@ -33,15 +17,11 @@
     <div class="page-close">
         <form action="test.html" method='post'>
             <div id='submitcode'>
-                <input type='text' name='code' placeholder="inputcode" />
+                input code name : <input type='text' name='name' />
             </div>
             <div id='submit'>
-                <input type='submit'  />
+                <input type='submit' value='전송'  />
             </div>
-            input code name : <input type='text' id='userinput' />
-            <button type='button' class='mybtn' onClick="location.href='PAGENAME.html'"> 제출하기 </button>
-                cs
-                
         </form>
 
     </div>
