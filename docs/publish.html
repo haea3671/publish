@@ -12,6 +12,7 @@
 <img src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
 </a>
 <script type='text/javascript'>
+    const name = request.getParameter('name')
   //<![CDATA[
     Kakao.init('fe8e700a402c67918bc34f6ef974d636');
     let gogo = 'haea3671.github.io/mihyun/';
@@ -19,20 +20,20 @@
       container: '#kakao-link-btn',
       objectType: 'feed',
       content: {
-        title: 'from 안미현',
+        title: 'from' + request.getParameter('name'),
         description: '2021년 새해 복 많이 받으세요!',
         imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
         link: {
-          mobileWebUrl: 'https://haea3671.github.io/mihyun',
-          webUrl:'https://haea3671.github.io/mihyun'
+          mobileWebUrl: 'https://haea3671.github.io/'+name,
+          webUrl:'https://haea3671.github.io' + name
         }
       },
       buttons: [
         {
           title: '카드 보기',
           link: {
-            mobileWebUrl: 'https://haea3671.github.io/mihyun/',
-            webUrl: 'https://haea3671.github.io/mihyun/'
+            mobileWebUrl: 'https://haea3671.github.io/'+name,
+          webUrl:'https://haea3671.github.io' + name
           }
         }
       ]
