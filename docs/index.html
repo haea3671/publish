@@ -14,29 +14,34 @@
 
 
   <style>
-      * {
-          font-family: 'Poor Story', cursive;
-      }
-      .inputpage {
-            display: block;
-        }
+    * {
+      font-family: 'Poor Story', cursive;
+    }
 
-        .sharepage {
-            display: none;
-        }
+    .inputpage {
+      display: block;
+    }
 
-     @media screen and (max-width: 760px) {
-     }
+    .sharepage {
+      display: none;
+    }
+
+    @media screen and (max-width: 760px) {}
   </style>
 
-  <script>
+  <script type="text/javascript">
     var temp;
+    function input() {
+      var input = document.getElementsById("input").value;
+      temp = input;
+    }
+  </script>
+
+  <script>
     function open_share() {
-        var input = document.getElementById('input').value;
-        temp = input;    
-            document.getElementsByClassName("inputpage")[0].style.display = "none";
-            document.getElementsByClassName("sharepage")[0].style.display = "block";
-        }
+      document.getElementsByClassName("inputpage")[0].style.display = "none";
+      document.getElementsByClassName("sharepage")[0].style.display = "block";
+    }
   </script>
 </head>
 
@@ -44,8 +49,8 @@
 
   <div class='inputpage'>
     <input type='text' id='input'>
-    <button on click='open_share()'>입력받기</button>    
-<!--
+    <button on click='open_share()'>입력받기</button>
+    <!--
     <input type='text' name='name' value='' />
     <button class="next" type="button" onclick="open_share()"> 전송 </button>
 -->
@@ -56,31 +61,31 @@
       <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
     </a>
     <script type='text/javascript'>
-      //<![CDATA[
-      Kakao.init('fe8e700a402c67918bc34f6ef974d636');
+        //<![CDATA[
+        Kakao.init('fe8e700a402c67918bc34f6ef974d636');
 
-      Kakao.Link.createDefaultButton({
-        container: '#kakao-link-btn',
-        objectType: 'feed',
-        content: {
-          title: 'from '+temp,
-          description: '2021년 새해 복 많이 받으세요!',
-          imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
-          link: {
-            mobileWebUrl: 'https://haea3671.github.io/'+temp,
-            webUrl: 'https://haea3671.github.io/'+temp
-          }
-        },
-        buttons: [
-          {
-            title: '카드 보기',
+        Kakao.Link.createDefaultButton({
+          container: '#kakao-link-btn',
+          objectType: 'feed',
+          content: {
+            title: 'from ' + temp,
+            description: '2021년 새해 복 많이 받으세요!',
+            imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
             link: {
-              mobileWebUrl: 'https://haea3671.github.io/'+temp,
-              webUrl: 'https://haea3671.github.io/'+temp
+              mobileWebUrl: 'https://haea3671.github.io/' + temp,
+              webUrl: 'https://haea3671.github.io/' + temp
             }
-          }
-        ]
-      });
+          },
+          buttons: [
+            {
+              title: '카드 보기',
+              link: {
+                mobileWebUrl: 'https://haea3671.github.io/' + temp,
+                webUrl: 'https://haea3671.github.io/' + temp
+              }
+            }
+          ]
+        });
           //]]>
     </script>
   </div>
