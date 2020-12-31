@@ -29,17 +29,8 @@
     @media screen and (max-width: 760px) {}
   </style>
 
-  <script type="text/javascript">
-    var temp;
-    function input() {
-      var input = document.getElementsById("input").value;
-      temp = input;
-    }
-  </script>
-
   <script>
     function open_share() {
-      input();
       document.getElementsByClassName("inputpage")[0].style.display = "none";
       document.getElementsByClassName("sharepage")[0].style.display = "block";
     }
@@ -62,31 +53,34 @@
       <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" />
     </a>
     <script type='text/javascript'>
-        //<![CDATA[
-        Kakao.init('fe8e700a402c67918bc34f6ef974d636');
+      var temp;
+      var input = document.getElementsById("input").value;
+      temp = input;
+      //<![CDATA[
+      Kakao.init('fe8e700a402c67918bc34f6ef974d636');
 
-        Kakao.Link.createDefaultButton({
-          container: '#kakao-link-btn',
-          objectType: 'feed',
-          content: {
-            title: 'from ' + temp,
-            description: '2021년 새해 복 많이 받으세요!',
-            imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
+      Kakao.Link.createDefaultButton({
+        container: '#kakao-link-btn',
+        objectType: 'feed',
+        content: {
+          title: 'from ' + temp,
+          description: '2021년 새해 복 많이 받으세요!',
+          imageUrl: 'https://cdn2.vectorstock.com/i/1000x1000/84/61/simple-happy-new-year-card-minimalistic-design-vector-18068461.jpg',
+          link: {
+            mobileWebUrl: 'https://haea3671.github.io/' + temp,
+            webUrl: 'https://haea3671.github.io/' + temp
+          }
+        },
+        buttons: [
+          {
+            title: '카드 보기',
             link: {
               mobileWebUrl: 'https://haea3671.github.io/' + temp,
               webUrl: 'https://haea3671.github.io/' + temp
             }
-          },
-          buttons: [
-            {
-              title: '카드 보기',
-              link: {
-                mobileWebUrl: 'https://haea3671.github.io/' + temp,
-                webUrl: 'https://haea3671.github.io/' + temp
-              }
-            }
-          ]
-        });
+          }
+        ]
+      });
           //]]>
     </script>
   </div>
